@@ -1,100 +1,49 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+@extends('template')
+@section('title')
+    <title>NextGeniusProject</title>
+@endsection
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <section class="panel panel-default" style="margin-top:100px;">
+                    <div class="panel-heading text-center">
+                        <h2 class="text-bold">Nueva Evaluación</h2>
+                    </div>
+                    <form class="form-horizontal" action="{{route('welcomeAgregar')}}" method="POST">
+                        <div class="panel-body">
+                            @csrf
+                            <div class="row">
+                                <div class="col-sm-12">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input class="form-control" id="nombreUsuario" name="nombreUsuario" type="text" placeholder="Su nombre" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input class="form-control" id="tituloEvaluacion" name="tituloEvaluacion" type="text" placeholder="El título de su evaluación" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <textarea class="form-control" name="textoParcial" id="textoParcial" cols="30" rows="10" placeholder="Su evaluación" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer" style="background-color: white">
+                            <div style="text-align: end;border-width:0">
+                                <button type="submit" class="btn btn-success">Grabar</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+@endsection
