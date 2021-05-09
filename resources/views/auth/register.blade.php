@@ -1,11 +1,11 @@
 @extends('template')
 
 @section('content')
-<div class="container">
+<div class="container" style="margin-top: 30px;">
     <div class="row text-center">
         <div class="col-md-12">
             <div class="card">
-                <h1>{{ __('Registrate') }}</h1>
+                <h1 style="margin-top: 30px;">{{ __('Registrate') }}</h1>
                 <br>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-10 offset-md-4" style="text-align: end;">
+                            <div class="col-md-10 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Registrar') }}
                                 </button>

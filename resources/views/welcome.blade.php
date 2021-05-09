@@ -6,53 +6,58 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <section class="panel panel-default" style="margin-top:100px;">
-                    <div class="panel-heading text-center text-bold text-primary">
+                <div class="card" style="margin-top:100px;">
+                    <div class="card-header text-center text-bold text-info">
                         <h1 style="font-size:36px;">Nueva Evaluación</h1>
                     </div>
                     <form class="form-horizontal" action="{{route('welcomeAgregar')}}" method="POST">
                         <div class="panel-body">
-                            @csrf
-                            <div class="row">
-                                <div class="col-sm-12 text-center">
-                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 25px;" id="1star" ></span>
-                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 25px;" id="2star"></span>
-                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 25px;" id="3star"></span></span>
-                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 25px;" id="4star"></span></span>
-                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 25px;" id="5star"></span>
+                            <div class="padd">
+                                @csrf
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input class="form-control" id="nombreUsuario" name="nombreUsuario" type="text" placeholder="Su nombre" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input class="form-control" id="nombreUsuario" name="nombreUsuario" type="text" placeholder="Su nombre" required>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input class="form-control" id="tituloEvaluacion" name="tituloEvaluacion" type="text" placeholder="El título de su evaluación" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input class="form-control" id="tituloEvaluacion" name="tituloEvaluacion" type="text" placeholder="El título de su evaluación" required>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <textarea class="form-control" name="textoParcial" id="textoParcial" cols="30" rows="10" placeholder="Su evaluación" required></textarea>
+                                    </div>
                                 </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <textarea class="form-control" name="textoParcial" id="textoParcial" cols="30" rows="10" placeholder="Su evaluación" required></textarea>
+                                <br>
+                                <div class="row text-center">
+                                    <div class="col-sm-12 text-center">
+                                        <h5 class="text-warning">Califica la evaluación</h5>
+                                        <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 35px;" id="1star" ></span>
+                                        <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 35px;" id="2star"></span>
+                                        <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 35px;" id="3star"></span></span>
+                                        <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 35px;" id="4star"></span></span>
+                                        <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 35px;" id="5star"></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="hidden" class="form-control" name="rating" id="rating" required>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="hidden" class="form-control" name="rating" id="rating" value='0' required>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <br>
                         <div class="panel-footer" style="background-color: white">
                             <div style="text-align: end;border-width:0">
-                                <button type="submit" class="btn btn-success">Grabar</button>
+                                <button type="submit" style="margin-right: 20px;" class="btn btn-success">Grabar</button>
                             </div>
                         </div>
                     </form>
-                </section>
+                </div>
             </div>
         </div>
     </div>

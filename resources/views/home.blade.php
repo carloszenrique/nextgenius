@@ -29,7 +29,7 @@
                                         {{$evaluacion->created_at->format('d/m/Y')}}
                                     </td>
                                     <td class="text-center">
-                                        {{$evaluacion->id}}
+                                        {{$evaluacion->created_at->format('h:m:s')}}
                                     </td>
                                     <td class="text-center">
                                         {{$evaluacion->id}}
@@ -51,7 +51,8 @@
                                     </td>
                                     <td class="text-center">
                                         <div class="btn-group">
-                                            <a href="{{route('homeModal',$evaluacion->id)}}" class="btn btn-primary" title="Ver">
+                                            <a  class="btn btn-primary" title="Ver" data-toggle="modal"
+                                                data-target="#modalEvaluaciones">
                                                 <i class="fa fa-eye"></i>
                                             </a>
                                             <form action="{{route('homeEliminar', $evaluacion)}}" style="display: inline" method="post">
@@ -73,13 +74,15 @@
     </div>
 </div>
 @endsection
-
+@push('modals')
+    @include('modals.verEvaluacionModal')
+@endpush
 @push('scritps')
-<script>
-    $(document).ready( function () {
-    $('#tableEvaluacion').DataTable();
-    } );
+    <script>
+        $(document).ready( function () {
+        $('#tableEvaluacion').DataTable();
+        } );
 
-  </script>
+    </script>
 @endpush
 

@@ -1,11 +1,11 @@
 @extends('template')
 
 @section('content')
-<div class="container">
+<div class="container" style="margin-top: 30px;">
     <div class="row text-center">
         <div class="col-md-12">
             <div class="card">
-                <h1>{{ __('Iniciar Sesión') }}</h1>
+                <h1 style="margin-top: 30px;">{{ __('Iniciar Sesión') }}</h1>
                 <br>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
