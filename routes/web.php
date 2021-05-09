@@ -13,8 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Ruta inicial
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+Auth::routes();
 
+// Ruta para agregar una evaluacion
 Route::post('/evaluacion/agregar', 'EvaluacionController@agregarEvaluacion')->name('welcomeAgregar');
+
+// Ruta para llamar a la tabla de evaluaciones
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Ruta para abrir el modal
+Route::get('/home/{evaluaciones}', 'HomeController@abrirModal')->name('homeModal');
+
+// Ruta para hacer eliminacion lógica
+Route::delete('/home/{evaluaciones}', 'HomeController@eliminar')->name('homeEliminar');
