@@ -13,6 +13,7 @@ class EvaluacionController extends Controller
         $evaluacion->nombre = $request->input('nombreUsuario');
         $evaluacion->titulo = $request->input('tituloEvaluacion');
         $evaluacion->texto_parcial = $request->input('textoParcial');
+        $evaluacion->rating = $request->input('rating');
         $evaluacion->save();
         return redirect()->route('welcome');
     }
