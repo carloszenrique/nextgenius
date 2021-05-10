@@ -17,7 +17,7 @@ class CreateEvaluacionsTable extends Migration
             $table->increments('id')->unsigned();
             $table->string('nombre',50);
             $table->string('titulo',255);
-            $table->string('texto_parcial',255);
+            $table->string('texto_parcial',3000);
             $table->integer('rating');
             $table->char('status')->default('A');
             $table->timestamps();
