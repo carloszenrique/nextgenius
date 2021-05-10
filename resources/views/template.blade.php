@@ -43,7 +43,7 @@
                           "sSearch": "Buscar:",
                           "oPaginate": {
                             "sFirst": "Primero",
-                            "sLast": "Último",
+                            "sLast": "Ultimo",
                             "sNext": "Siguiente",
                             "sPrevious": "Anterior"
                           },

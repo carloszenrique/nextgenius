@@ -28,5 +28,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Ruta para abrir el modal
 Route::get('/home/{evaluaciones}', 'HomeController@abrirModal')->name('homeModal');
 
-// Ruta para hacer eliminacion lógica
+// Ruta para hacer eliminacion logica
 Route::delete('/home/{evaluaciones}', 'HomeController@eliminar')->name('homeEliminar');
