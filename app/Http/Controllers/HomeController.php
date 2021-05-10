@@ -24,13 +24,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $evaluaciones = Evaluacion::all();
+        $evaluaciones = Evaluacion::where('status', '=', 'A')->get();
         return view('home', compact('evaluaciones'));
 
     }
 
-    public function abrirModal(){
-
+    public function abrirModal($id){
+        $evaluaciones2 = Evaluacion::where('id', '=', $id)->get();
     }
 
     public function eliminar(Request $request, Evaluacion $evaluaciones){

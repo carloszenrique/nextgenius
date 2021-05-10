@@ -51,8 +51,8 @@
                                     </td>
                                     <td class="text-center">
                                         <div class="btn-group">
-                                            <a  class="btn btn-primary" title="Ver" data-toggle="modal"
-                                                data-target="#modalEvaluaciones">
+                                            <a  id="submitModal" class="btn btn-primary" style="color:white; margin-right: 5px;" title="Ver" data-toggle="modal"
+                                                data-target="#modalEvaluaciones {{$evaluacion->id}}">
                                                 <i class="fa fa-eye"></i>
                                             </a>
                                             <form action="{{route('homeEliminar', $evaluacion)}}" style="display: inline" method="post">
@@ -65,6 +65,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                @include('modals.verEvaluacionModal')
                             @endforeach
                         </tbody>
                     </table>
@@ -82,7 +83,10 @@
         $(document).ready( function () {
         $('#tableEvaluacion').DataTable();
         } );
-
     </script>
+
+
+
+
 @endpush
 
