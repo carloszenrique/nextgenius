@@ -13,13 +13,13 @@
                             <tr>
                                 <th class="text-center">Fecha</th>
                                 <th class="text-center">Hora</th>
-                                <th class="text-center">Evaluación Nº</th>
+                                <th class="text-center">Evaluaci&oacute;n Nº</th>
                                 <th class="text-center">Nombre</th>
                                 <th class="text-center">Estrellas Asignadas</th>
-                                <th class="text-center">Título</th>
+                                <th class="text-center">T&iacute;tulo</th>
                                 <th class="text-center">Texto Parcial</th>
                                 <th class="text-center">Estado</th>
-                                <th class="text-center">Acción</th>
+                                <th class="text-center">Acci&oacute;n</th>
                             </tr>
                         </thead>
                         <tbody>

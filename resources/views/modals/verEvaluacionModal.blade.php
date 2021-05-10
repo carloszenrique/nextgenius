@@ -3,7 +3,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-info" id="myModalLabel">
-                    Detalles de la evaluación
+                    Detalles de la evaluaci&oacute;n
                 </h5> 
                 <button type="button" class="close" data-dismiss="modal">
                     <span aria-hidden="true">×</span>
@@ -48,7 +48,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                <label class="col-sm-4 control-label">Título:</label>
+                                <label class="col-sm-4 control-label">T&iacute;tulo:</label>
                                 <div class="col-sm-12">
                                     <input type="text" class="form-control" style="text-align: right" id="tituloEvaluacion" name="tituloEvaluacion" value="{{$evaluacion->titulo}}" readonly required>
                                 </div>

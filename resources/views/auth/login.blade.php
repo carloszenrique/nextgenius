@@ -5,7 +5,7 @@
     <div class="row text-center">
         <div class="col-md-12">
             <div class="card">
-                <h1 style="margin-top: 30px;">{{ __('Iniciar Sesión') }}</h1>
+                <h1 style="margin-top: 30px;">{{ __('Ingresar') }}</h1>
                 <br>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -54,7 +54,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-9 offset-md-4" >
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Iniciar Sesión') }}
+                                    {{ __('Ingresar') }}
                                 </button>
 
                                 {{-- @if (Route::has('password.request'))

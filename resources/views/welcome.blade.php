@@ -8,7 +8,7 @@
             <div class="col-md-12">
                 <div class="card" style="margin-top:100px;">
                     <div class="card-header text-center text-bold text-info">
-                        <h1 style="font-size:36px;">Nueva Evaluación</h1>
+                        <h1 style="font-size:36px;">Nueva Evaluaci&oacute;n</h1>
                     </div>
                     <form class="form-horizontal" action="{{route('welcomeAgregar')}}" method="POST">
                         <div class="panel-body">
@@ -24,19 +24,19 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <input class="form-control" id="tituloEvaluacion" name="tituloEvaluacion" type="text" placeholder="El título de su evaluación" required>
+                                            <input class="form-control" id="tituloEvaluacion" name="tituloEvaluacion" type="text" placeholder="El t&iacute;tulo de su evaluaci&oacute;n" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <textarea class="form-control" name="textoParcial" id="textoParcial" cols="30" rows="10" placeholder="Su evaluación" required></textarea>
+                                            <textarea class="form-control" name="textoParcial" id="textoParcial" cols="30" rows="10" placeholder="Su evaluaci&oacute;n" required></textarea>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row text-center">
                                         <div class="col-sm-12 text-center">
-                                            <h5 class="text-warning">Califica la evaluación</h5>
+                                            <h5 class="text-warning">Califica la evaluaci&oacute;n</h5>
                                             <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 35px;" id="1star" ></span>
                                             <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 35px;" id="2star"></span>
                                             <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer; font-size: 35px;" id="3star"></span></span>
